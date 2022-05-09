@@ -1,0 +1,57 @@
+general :
+
+- a process is a program in execution
+- dynamic data in heap & temporary data in stack (hence recursions use stack)
+- program code is stored in the text section
+
+memory layout of c program :
+
+- high memory : (argc, argv) + stack/heap
+- low memory : uninit data, init data & text
+
+process states :
+
+- during execution : fork() -> new -> ready -> exec() -> running -> exit() -> terminate
+- waiting state is entered when awaiting user input/output or event waits as part of the program (called by wait() system call)
+
+process control block :
+
+- PCB
+- every process has one
+- each block contains information like : 
+
+	- process state
+	- number program counter
+	- contents of involved cpu registers
+	- cpu scheduling information
+	- memory allocation information
+
+	- accounting info :
+
+		- cpu used
+		- clock time elapsed
+
+	- status info :
+
+		- io devices allocated
+		- list of open files
+
+- if an interrupt occurs :
+ 
+	- state is saved into first PCB and a state is reloaded from another PCB (maybe for error management for example)
+	- after the second PCB is done executing/interrupts, the first one is reloaded from stop point
+
+Process scheduling :
+
+- short term, long term & medium term 
+
+- scheduling queues :
+
+	- job queue : set of all processes in the system
+	- ready queue : in main memory, ready for execution
+	- device queues : processes waiting for io device
+
+- queues hold pointers to PCBs in the form of a linked list with the header node also pointing to the tail node
+
+
+

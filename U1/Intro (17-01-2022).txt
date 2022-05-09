@@ -1,0 +1,23 @@
+introduction :
+
+- 10/40/50 for programming exercises/ISA/ESA
+- resources : io devices, memory, processor (HW)
+- shareable/non-shareable resources
+- os manages resources
+- system & application software e.g.; (os,bios, compiler), editors, etc
+- provides a user friendly environment for computer use e.g.; unix, linux, windows, macos
+- user + system perspective (latter -> focus)
+
+- why study? : to potimize programs for performance & security
+- user (level 1) -> programs (level 2) -> os (level 3) -> hardware (level 4)
+- user may be person or another computer
+- os is a resource allocator & control program from system pov
+- kernel runs at all times on the computer
+
+OS goals :
+
+- user friendliness
+- program execution efficiency
+- efficient hardware use (optimization)
+- manage resources (memory, processor, i/o)
+

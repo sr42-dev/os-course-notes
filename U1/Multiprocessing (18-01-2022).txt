@@ -1,0 +1,24 @@
+multiprocessors :
+
+- multiprocessors : multiple cores
+- parallel systems possible
+- increased throughput, economy of scale & reliability
+
+- two types :
+
+	- asymmetric multiprocessing : processes are executed by one core at a time (master/slave system)
+	- symmetric multiprocessing : process load is shared by all cores
+		- main memory is shared by all cores/CPUs
+		- e.g.; dual core processor
+
+blade servers :
+
+- processor, io board etc integrated in a single chassis
+
+storage area network :
+
+- storage sharing between multiple processors (analog to multiple cores)
+- survives failures by clustering
+
+
+

@@ -1,0 +1,52 @@
+general :
+
+- send(q, message) & receive(p, message)
+- q is the receiver and p is the sender
+- if p and q wish to communicate, a comms link has to be established
+
+comms links :
+
+- physical : shared memory, hardware bus, network
+- logical : direct/indirect, synchronous/asynchronous, automatic/explicit buffering
+
+- direct comms : send(p, message), receive(q, message); p & q are processes
+- indirect comms : send(p, message), receive(q, message); p & q are mailboxes shared by processes that are destroyed after use
+- synchronous messgae passing : sender blocked till message received, receiver blocked till message available
+- asynchronous messgae passing : sender continuosly publishes, receiver receiver receives all messages regardless of validity
+
+buffering :
+
+- queue of messages (temporarily held here)
+- zero, bounded & unbounded capacity 
+
+pipelining :
+
+- pipe()
+- | on linux terminal
+
+- int pipe(int fd[2]); // file descriptor : fd, returns 0 for success, -1 for failure
+	
+	- fd[0]; // contains return value of read() 1 byte
+	- fd[1]; // contains return value of write() 512 bytes
+	- creates pipe and returns int variable
+	- file descriptors are identifiers for processes
+
+- ordinary pipes : parent/child communication (fd[0] of parent is connected with fd[1] of child and vice versa)
+- named pipes : bidirectional communication, FIFO messaging (ince data is retrieved, it is removed from the pipe)
+- half duplex pipe : both ends connect to the same process, passes through kernel
+- popen(), pclose()
+- FIFO : named pipe, mkfifo()/mkfifoat()
+- msgget(), msgsnd(), msgrcv()
+
+semaphores :
+
+- counter shared by multiple processes
+- mutual exclusion
+- wait(s), signal(s)
+- semget(), semactl(), semop()
+
+shared memory :
+
+- shmget(), shmctl(), shmat()
+
+

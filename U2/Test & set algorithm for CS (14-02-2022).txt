@@ -1,0 +1,33 @@
+test & set algorithm :
+
+- satisfies critical section requirements
+
+- do
+
+	waiting[i] = true
+	key = true
+
+	while(waiting[i] && key)
+
+		key = test_and_set(&lock)
+
+	waiting[i] = false
+	
+	<critical section>
+
+	j = (i+1)%n
+
+	while((j != i) && !waiting[j])
+
+		j = (j+1)%n
+
+	if (j==1) lock = false
+	else waiting[j] = false
+
+	<remainder section>
+
+  while (true)
+
+- essentially, only the processes to be entered are given true lock status while the rest are given false so they don't go into critical section
+
+		

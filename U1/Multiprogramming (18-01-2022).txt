@@ -1,0 +1,11 @@
+general :
+
+- multiprogramming : bringing more processes to the RAM for execution
+- multitasking : using more CPUs to perform more executions at the same time
+- hardware & software interrupt
+- dual mode : user mode & kernel mode determined by mode bit
+- kernel is the intermediate between OS & hardware
+- mode bit is changed by interrupt, which sends the OS into kernel mode, which can reset the system
+- dual & multimode operation
+- timers are implemented using clock signal to trigger interrupt infinite loops
+ 

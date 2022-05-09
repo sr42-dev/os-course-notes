@@ -1,0 +1,23 @@
+linux 2.5 :
+
+- currently v5.16 
+- old case study
+
+- cfs scheduler :
+
+	- scheduling classes
+	- classes were fixed for execution based on priority
+	- completely fair scheduler
+	- assigns proportion of cpu time to each task
+	- nice value
+	- virtual run time based BST is used to represent
+	- BST has time complexity of logn
+	- red/black tree type is used as it is self balancing
+	
+- real time scheduling according to posix 1.b
+- real time tasks have static priorities
+
+windows :
+
+- priority based preemptive scheduling
+- <slides> 

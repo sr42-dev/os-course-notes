@@ -1,0 +1,40 @@
+general :
+
+- exit()
+- wait()
+- waitpid()
+- waitid()
+
+- exec() // check sample programs
+
+	- execv()
+	- execl()
+	- execle()
+	- execve()
+	- execlp()
+	- execvp()
+	- fexecve()
+
+- getpid()
+- getppid()
+
+race condition :
+
+- when two processes are trying to run at the same time but resources are allocated based on order of execution
+- mutual exclusion
+
+CPU scheduling :
+
+- only one process per CPU
+- solved by multi core processors
+- eneabled by multiprogramming
+- alternating CPU/IO burst
+
+scheduling criteria :
+
+- CPU utilization
+- throughput
+- turnaround time
+- waiting time
+- response time
+- <FCFS & SJF waiting time reduction methods>

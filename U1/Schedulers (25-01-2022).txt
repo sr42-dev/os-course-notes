@@ -1,0 +1,82 @@
+short term scheduler :
+
+- invoked frequently (in ms)
+- selects processes to be executed from RAM
+
+long term scheduling :
+
+- brings processes from hard drive to CPU
+- invoked infrequently (every few minutes)
+- controls degree of multiprogramming
+
+medium term scheduler :
+
+- swaps processes between memory, disk & CPU
+- aka swapper
+
+context switch :
+
+- saving state of old PCB when new process is loaded
+- context in PCB
+- complex CPU makes context switches slower
+
+system processes :
+
+- created by fork()
+- fork doesn't take any arguments and returns int (0 for child, +ve for parent, -ve for error)
+- in C, they exist in sys/types.h & unistd.h
+- fork() splits process into child and parent process
+- hence, two fork() calls will split parent -> child1 + parent followed by splitting child1 into child1 & child2 and parent into child1 & parent (all children are main() calls)
+- n forks call main() 2^n - 1 times (as forking is structured like a binary tree and one leaf will always be the parent)
+- resources allocated to parent is also shared by children
+
+- if child process executes and parent is in sleep/exited : zombie
+- if a parent is terminated without wait, process is an orphan
+
+preemptive & non-preemtive scheduling :
+
+- preemptive :
+
+	- fcfs
+	- sjf
+	- priority
+
+- non premptive :
+
+	- round robin
+	- shortest remaining time
+	- multilevel queue
+	- multilevel feedback queue
+
+- dispatcher gives control of module to CPU as selected by short term scheduler
+
+- GANTT chart analysis :
+
+	- used to represent queue of tasks
+	- turnaround time = completion time - arrival time
+	- waiting time = turnaround time -  first time
+
+	- arrival time : time at tasking
+	- burst time : execution time
+	- gantt chart axis represents arrival time
+	- each task is as large as represented by it's burst time
+	- new tasks may arrive before the previous one is done executing, in which case, burst time is added to arrival time for a task
+	- completion time = start time + burst time
+	- turnaround time = completion time - arrival time
+	- waiting time = turnaround time - burst time
+
+general :
+
+- multilevel queue scheduling
+- multilevel feedback scheduling
+
+multi-processor scheduling :
+
+- load balancing :
+
+	- push migration
+	- pull migration
+
+
+
+

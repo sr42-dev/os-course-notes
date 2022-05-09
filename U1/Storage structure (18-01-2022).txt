@@ -1,0 +1,23 @@
+hard disk :
+
+- non volatile memory extension
+- multiple metal/glass discs divided into tracks -> sectors
+- disk controller determines interactions between device & computer
+- solid state disks : faster, compact, high memory density
+
+storage/memory heirarchy : 
+
+- registry -> cache -> main memory -> ssd -> hard disk -> optical disk -> magnetic tape
+- level 0 to 6
+- increase in level decreases speed
+- increase in level increases size
+- increase in level decreases cost/unit memory
+
+cache :
+
+- cache : virtual memory, used for copying information into a faster storage level
+- e.g.; main memory is a cache for secondary storage
+- when data is accessed, cache is checked first
+- if cache is smaller than storage being cached : design problem
+- fixed by replacement policy : FIFO -> first unused process loaded into cache is removed and replaced by new process
+ 

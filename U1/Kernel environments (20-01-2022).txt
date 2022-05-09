@@ -1,0 +1,49 @@
+general :
+
+-  array : contiguous static data structure
+
+- linked lists : used in secondary memory 
+
+	- easy insertion & deletion
+	- O(n) time complexity
+	- used to construct stacks & queues
+
+- stacks : used in compilers, bracket matching, LIFO
+- queues : used in printer queues, FIFO
+
+- trees : heirarchical data structure
+
+	- parent/child format
+	- O(n) for binary, O(log n) for BST
+	- used in CPU scheduling
+
+- hash tables : 
+
+	- O(1) time complexity
+	- key-value pair format 
+
+- bitmaps :
+
+	- string of n binary digits denoting states of n items
+	- 0/1 : resource available/unavailable
+	- used to denote availability of disk blocks
+
+- portals : web access to internal systems
+- distributed computing
+- network operating system
+
+- client/server architecture :
+	
+	- servers facilitate data access (file server) & provide an interface to request services (compute server)
+	- clients request services from the server
+
+- virtualization : OS natively compiled for CPU (type 1 - no host OS between hypervisor & hardware, type 2 - host OS present)
+- emulation : when source CPU different from target in virtualization
+- hypervisors help virtual machines to connect to hardware resources
+
+- cloud computing :
+	
+	- availibility of computer resources  like data storage and computing power without direct active management by the user
+	- software as a service e.g.; word processors
+	- platform as a service e.g.; Azure
+	- infrastructure as a service e.g.; AWS

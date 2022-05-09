@@ -1,0 +1,6 @@
+Linux installation :
+
+- 3 options :
+	- AWS
+	- Virtualbox
+	- dual boot

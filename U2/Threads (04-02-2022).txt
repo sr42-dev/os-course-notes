@@ -1,0 +1,81 @@
+general :
+
+- threads are the basic unit of processes
+- thread id -> program counter -> register -> stack
+- each thread in a process represents an individual task being performed by that process
+
+- they allow execution if part of the process is blocked
+- resources can be shared easier
+
+- user threads : managed by user level library
+
+	- POSIX threads
+	- windows threads
+	- java threads
+
+- kernel threads 
+
+- threading :
+
+	- many to one : many user level threads are mapped to one kernel thread (delay for any one blocks all)
+	- one to one
+	- many to many
+	- hybrid
+
+amdahl's law :
+
+- speedup <= 1/(s + (1-s)/n)
+- s = proportion of serial processing
+- n = change in cores
+
+race condition :
+
+- 2 processes competing to access the same resource
+- exists in process synchronization
+
+critical section :
+
+- segment of code where kernel data structures are modified
+
+- conditions :
+
+	- mutual exclusion : simultaneous execution in critical section not allowed
+	- progress : processes that will enter critical section next are prioritized
+	- bounded wait (optional) : bound on the number of cs processes allowed before cs request is granted
+
+- peterson's solution :
+
+	- // algorithm for process Pi
+
+	  while true
+
+		flag[i] = true
+		turn = j
+		
+		while(flag[j] && turn == j)
+			
+			<critical section>
+
+		flag[i] = false
+
+		<remainder section>
+
+	- // algorithm for process Pj
+
+	  while true
+
+		flag[j] = true
+		turn = i
+		
+		while(flag[i] && turn == i)
+			
+			<critical section>
+
+		flag[j] = false
+
+		<remainder section>
+
+	- concurrent programming algorithm for mutual exclusion that allows two or more processes (Pi & Pj) to share a single-use resource without conflict, using only shared memory for communication
+	- ensures that Pi doesn't enter critical section when Pj does as Pi enters cs only if turn is i, which can't also be j at the same time
+	- condition for Pi cs is flag[j] = false or turn = i
+	

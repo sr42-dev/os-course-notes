@@ -1,0 +1,28 @@
+general :
+
+- inter process communication
+- computer networks share data, resources & computation speed
+
+- process :
+
+	- independent process
+
+	- cooperating process
+
+		- info sharing
+		- computation speed up
+		- modularity
+		- convenience 
+
+- inter process communication (IPC) :
+
+	- message passing model
+
+		- process A + process B + ... + message queue + m1m2m3m4...mn + kernel
+		
+- producer/consumer problem :
+
+	- write()/read() pairing
+	- shared bounded buffer implemented as circular array with in & out
+
+- shared memory : used among processes that need to communicate

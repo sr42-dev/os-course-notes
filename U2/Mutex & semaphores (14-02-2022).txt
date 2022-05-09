@@ -1,0 +1,60 @@
+MUTEX :
+
+- mutex : mutual exclusion, aka spin locks
+- no context switch necessary
+
+- do
+
+	acquire lock
+	<critical section>
+	release lock
+	<remainder>
+
+  while true
+
+-  do
+
+	while(!available) available = false
+	<critical section>
+	available = true
+	<remainder>
+
+  while true
+
+semaphores :
+
+- complex version of mutex locks
+- binary & counting semaphores
+- binary semaphore is a boolean variable that acts as available from mutex lock program
+- binary semaphore has busy waiting period when queueing
+
+- signal, wait, block & wakeup <know about it>
+
+- semaphore implementation without busy waiting
+
+	- by maintaining waiting queue & ready queue, there is no delay between simultaneous process executions i.e.; busy waiting
+
+	- wait(semaphore *s)
+	
+		s->value--
+
+		if s->value < 0
+
+			add process to linked list of semaphores (s->list)
+			block(); places process in waiting queue
+
+		<critical section>
+
+	  signal(semaphore *s) 
+
+		s->value++;
+
+		if s->value <= 0
+
+			remove process P from s->list
+			wakeup(P); removes P from waiting queue and places in ready queue
+
+- deadlocks occur with semaphores : two or more processes waiting for the other's execution when all are in waiting (infinite delay)
+- starvation : a process is never removed from semaphore queue where it is suspended
+- priority inversion : lower priority process holds a lock needed by higher priority process (solved by inheritance of keys from low to high priority processes)
+ 

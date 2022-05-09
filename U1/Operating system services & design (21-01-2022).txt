@@ -1,0 +1,32 @@
+general :
+
+-  3 user interfaces : GUI, batch & command line
+
+- system calls are made from user interfaces : 
+
+	- prog exec
+	- io ops
+	- file systems
+	- communication
+	- resource alloc
+	- accounting (resource sharing)
+	- error detection
+
+- batch code
+- communications between programs
+-  protection & security
+- system calls are written in C & C++ (usually) as subroutines :
+
+	- process control
+	- file manip
+	- device manip
+	- information maintenance
+	- comms
+	- protection
+
+design :
+
+- define specs
+- note choice of hardware
+- systems are written in C/C++, scripting in python/perl
+- higher level languages port easily but are slower

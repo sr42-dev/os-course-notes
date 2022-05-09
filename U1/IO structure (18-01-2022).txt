@@ -1,0 +1,13 @@
+intro :
+
+- storage devices are also io as they have input & output mechanism
+- most OS code is dedicated to this
+- CPU & device controllers are connected using buses e.g.; small computer systems interface (SCSI)
+- each controller is in charge of a device 
+
+device controller :
+
+- maintains buffer storage
+- interrupts : stop errors
+- system call : calls to perform actions on files
+- device status table : contains identifying numbers on all devices and their statuses
